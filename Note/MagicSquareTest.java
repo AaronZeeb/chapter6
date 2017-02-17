@@ -1,11 +1,3 @@
-/********************************************************************
-// Starter Code for Magic Square
-
-
-import
-//******************************************************************* */
-
-
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import javax.swing.*;
