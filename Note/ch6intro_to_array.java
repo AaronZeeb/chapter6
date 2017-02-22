@@ -80,9 +80,7 @@ public static void main (String[] args)
     ArrayList <CD> mycds = new ArrayList<>();
     
     mycds.add(new CD("From within","HeadHunterz",);
-    mycds.add("Headhunterz");
-    mycds.add("$10.99");
-    mycds.add("15");
+
     
 /**/
        mathy useful= new mathy();

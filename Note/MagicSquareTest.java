@@ -21,7 +21,7 @@ public class MagicSquareTest
 
 	// magic square or not a magic square, that is the question
 	int [][] square1 = { {5,9,1},
-						 {7,2,6},
+						 {7,2,6}, 
 						 {3,4,8}  };
 
 	// Do you belive in magic?
@@ -31,18 +31,27 @@ public class MagicSquareTest
 						{10,18, 1,14,22},
 						{23, 6,19, 2,15}  };
 
-	mathy useful = new mathy(square1);
+	mathy useful = new mathy(square);
 
 	if (useful.isMagic())
 		System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());
 	else
 		System.out.println("Hello muggle");
 
+	useful.setMagicSquare(square1);
+	
+	if (useful.isMagic())
+		System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());
+	else
+		System.out.println("Hello muggle");
+		
 	useful.setMagicSquare(square2);
-
-	// print the same results for square2 and square3
-
-
+		
+	if (useful.isMagic())
+		System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());
+	else
+		System.out.println("Hello muggle");
+	
 
 }//end of main
 }// end of class

@@ -283,7 +283,7 @@ public class mathy
    
    public MagicSquare(int[][]array)
    {
-    
+       sum=square+
     }
   
    public boolean isMagic()
@@ -309,5 +309,29 @@ public class mathy
    public int addColumns(int col)
    {
     
+    }
+   public String toString()
+   {
+       for(int row=0; row < table.length; row++)
+       {
+           for(int col=0; col<square[row].length;col++)
+                System.out.print(square[row][col]+"\t");
+           System.out.println();
+       }
+       System.out.println();
+       for(row=0; row < table.length; row++)
+       {
+            for(col=0; col<square1[row].length;col++)
+                System.out.print(square1[row][col]+"\t");  
+            System.out.println();
+        }
+       System.out.println();
+       for(row=0; row < table.length; row++)
+       {
+           for(col=0; col<square2[row].length;col++)
+                System.out.print(square2[row][col]+"\t");
+           System.out.println();
+        }
+       System.out.println();
     }
 }//end of class
