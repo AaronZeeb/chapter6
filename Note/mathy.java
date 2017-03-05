@@ -330,14 +330,14 @@ public class mathy
         if (square[0][0] + square[1][1] + square[2][2] != magicnum)
             return false;
 
-        //Checks backward diagonal
+       //Checks backward diagonal
         if (square[0][2] + square[1][1] + square[2][0] != magicnum)
             return false;
 
         return true;
     }
     
-    public int getMagicNum()
+    public int getMagicNum(int magicnum)
     {
         return magicnum;
     }
