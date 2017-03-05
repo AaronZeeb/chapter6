@@ -24,6 +24,7 @@ public class mathy
     }
 
 
+
     /**
         take the absoulute value of the number
         @param int value
@@ -39,7 +40,7 @@ public class mathy
 
 
     }//end of abs
-   //}end of class
+    //}end of class
 
     /**
         takes the odd numbers out of an array
@@ -263,8 +264,8 @@ public class mathy
         @param int []
         @return int [] twice the size, with values copied over
     */
-   public static int[] doubleSize(int[] array)
-   {
+    public static int[] doubleSize(int[] array)
+    {
        //make temp 2 times the size of array
        int[] temp = new int[array.length * 2];
        System.out.println(temp.length +"-" );
@@ -276,62 +277,93 @@ public class mathy
         //old array changes reference to new larger array
        array = temp;
 
-        return array;
+       return array;
 
-   }
+    }
 
    
-   public MagicSquare(int[][]array)
-   {
-       sum=square+
-    }
-  
-   public boolean isMagic()
-   {
-    
-    }
-    
-   public getMagicNum()
-   {
-    
-    }
-    
-   public setMagicSquare(int [][]array)
-   {
-    
-    }
-    
-   public int addRow(int row)
-   {
-    
-    }
-    
-   public int addColumns(int col)
-   {
-    
-    }
-   public String toString()
-   {
-       for(int row=0; row < table.length; row++)
-       {
-           for(int col=0; col<square[row].length;col++)
-                System.out.print(square[row][col]+"\t");
-           System.out.println();
-       }
-       System.out.println();
-       for(row=0; row < table.length; row++)
-       {
-            for(col=0; col<square1[row].length;col++)
-                System.out.print(square1[row][col]+"\t");  
+
+   
+   
+   
+   
+    public int MagicSquare(int[][]array ,int col)
+    {
+ 		int magicnum = 0;
+        for ( int row=0; row < array.length; row++)
+        {
+            System.out.print (array[col] + "\t");
+            magicnum += array[row][col];
             System.out.println();
         }
-       System.out.println();
-       for(row=0; row < table.length; row++)
-       {
-           for(col=0; col<square2[row].length;col++)
-                System.out.print(square2[row][col]+"\t");
-           System.out.println();
+    }
+  
+    public boolean isMagic()
+    {
+        //Checks each row
+        for ( i = 0; i < array.length; i++)
+        {
+            //Finds the sum of row [i
+            int sum = 0;
+            for ( j = 0; j < array.length; j++)
+                sum += square[i][j];
+            // If this row does not equal the magic sqaure number then it returns false
+            if (sum != 15)
+                return false;
         }
-       System.out.println();
+
+        //Checks each column
+        for ( j = 0; j < array.length; j++)
+        {
+            //Finds the sum of column #j
+            sum = 0;
+            for ( i = 0; i < array.length; i++)
+                sum += square[i][j];
+
+            //If this column does not equal the magic sqaure number then it returns false
+            if (sum != magicnum)
+                return false;
+        } 
+        
+        //Checks forward diagonal
+        for(i=0)
+        if (square[0][0] + square[1][1] + square[2][2] != magicnum)
+            return false;
+
+        //Checks backward diagonal
+        if (square[0][2] + square[1][1] + square[2][0] != magicnum)
+            return false;
+
+        return true;
+    }
+    
+    public int getMagicNum()
+    {
+        return magicnum;
+    }
+    
+    public int setMagicSquare(int [][]array)
+    {
+     
+    }
+    
+    public int addRow(int row)
+    {
+    
+    }
+    
+    public int addColumns(int col)
+    {
+    
+    }
+    public String toString()
+    {
+        for(int row=0; row < table.length; row++)
+        {
+            for(int col=0; col<square[row].length;col++)
+                 System.out.print(square[row][col]+"\t");
+            System.out.println();
+        }
+        System.out.println();
     }
 }//end of class

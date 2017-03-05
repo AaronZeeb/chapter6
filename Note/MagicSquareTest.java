@@ -9,8 +9,6 @@ public class MagicSquareTest
 
 	  public static void main (String[] args)
    {
-
-
 	// make a 2d array with an iniitalizer list.
 	//If you test this and it not Magic your waving your wand wrong
 
@@ -51,8 +49,6 @@ public class MagicSquareTest
 		System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());
 	else
 		System.out.println("Hello muggle");
-	
-
 }//end of main
 }// end of class
 
