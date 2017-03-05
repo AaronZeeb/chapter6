@@ -289,7 +289,7 @@ public class mathy
    
     public int MagicSquare(int[][]array ,int col)
     {
- 		int magicnum = 0;
+        int magicnum = 0;
         for ( int row=0; row < array.length; row++)
         {
             System.out.print (array[col] + "\t");
@@ -326,12 +326,22 @@ public class mathy
         } 
         
         //Checks forward diagonal
-        for(i=0)
-        if (square[0][0] + square[1][1] + square[2][2] != magicnum)
-            return false;
-
-       //Checks backward diagonal
-        if (square[0][2] + square[1][1] + square[2][0] != magicnum)
+        int amount=0;
+        for(int row=0; row < table.length; row++)
+        {
+            for(int col=0; col<square[row].length;col++)
+            {
+                amount+=square[row][col];
+                if (amount!=magicnum)
+                return false;
+            }
+        }
+        //Checks backward diagonal
+        amount=0;
+        amount+=square[0][2];
+        amount+=square[1][1];
+        amount+=square[2][0];
+        if (amount!= magicnum)
             return false;
 
         return true;
