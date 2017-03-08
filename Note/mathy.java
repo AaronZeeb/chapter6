@@ -368,12 +368,6 @@ public class mathy
     }
     public String toString()
     {
-        for(int row=0; row < table.length; row++)
-        {
-            for(int col=0; col<square[row].length;col++)
-                 System.out.print(square[row][col]+"\t");
-            System.out.println();
-        }
-        System.out.println();
+
     }
 }//end of class
