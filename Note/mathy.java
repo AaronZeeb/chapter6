@@ -287,7 +287,7 @@ public class mathy
    
    
    
-    public int MagicSquare(int[][]array ,int col)
+    public int MagicSquare(int[][]square ,int col)
     {
         int magicnum = 0;
         for ( int row=0; row < array.length; row++)
@@ -298,14 +298,14 @@ public class mathy
         }
     }
   
-    public boolean isMagic()
+    public boolean isMagic(int[][]square, int magicnum)
     {
         //Checks each row
-        for ( i = 0; i < array.length; i++)
+        for ( int i = 0; i < array.length; i++)
         {
             //Finds the sum of row [i
             int sum = 0;
-            for ( j = 0; j < array.length; j++)
+            for ( int j = 0; j < array.length; j++)
                 sum += square[i][j];
             // If this row does not equal the magic sqaure number then it returns false
             if (sum != 15)
@@ -313,11 +313,11 @@ public class mathy
         }
 
         //Checks each column
-        for ( j = 0; j < array.length; j++)
+        for (int j = 0; j < array.length; j++)
         {
             //Finds the sum of column #j
-            sum = 0;
-            for ( i = 0; i < array.length; i++)
+            int sum = 0;
+            for (int i = 0; i < array.length; i++)
                 sum += square[i][j];
 
             //If this column does not equal the magic sqaure number then it returns false
@@ -327,7 +327,7 @@ public class mathy
         
         //Checks forward diagonal
         int amount=0;
-        for(int row=0; row < table.length; row++)
+        for(int row=0; row < array.length; row++)
         {
             for(int col=0; col<square[row].length;col++)
             {
@@ -352,22 +352,26 @@ public class mathy
         return magicnum;
     }
     
-    public int setMagicSquare(int [][]array)
+    public int setMagicSquare(int [][]square,int[][]square1,int [][]square2)
     {
-     
+        int count=0;
+        if(count==0)
+        {
+            count++;
+            return square;
+        }
+        else if(count==1)
+        {
+            count++;
+            square=square1;
+            return square;
+        }
+        else if(count==2)
+        {
+            count++;
+            square=square2;
+            return square;
+        }
     }
     
-    public int addRow(int row)
-    {
-    
-    }
-    
-    public int addColumns(int col)
-    {
-    
-    }
-    public String toString()
-    {
-
-    }
 }//end of class
