@@ -296,6 +296,7 @@ public class mathy
             magicnum += square[row][col];
             System.out.println();
         }
+        return magicnum;
     }
   
     public boolean isMagic(int[][]square, int magicnum)
@@ -351,10 +352,10 @@ public class mathy
     {
         return magicnum;
     }
-    
+    /*
     public int setMagicSquare(int [][]square)
     {
-        
+        return square;
     }
-    
+    */
 }//end of class

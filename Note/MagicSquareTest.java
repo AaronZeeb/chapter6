@@ -31,7 +31,7 @@ public class MagicSquareTest
 
 	mathy useful = new mathy(square);
 
-	if (useful.isMagic())
+	if (useful.isMagic(square))
 		System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());
 	else
 		System.out.println("Hello muggle");
